@@ -1,6 +1,20 @@
 ---
 name: medium-tech-writing
+display_name: Medium 技术写作
+display_name_en: Medium Tech Writing
 description: "Medium 技术写作技能，模式提炼自大量真实英文技术出版物文章。当需要撰写、改写或评审面向 Medium 平台的技术文章/博客（教程、API 概念讲解、迁移指南、案例分析、版本公告、系列 wrap-up、技术周刊）时使用本技能；产出符合主流技术出版物风格的英文技术长文，含标题公式、开篇 hook、分节结构、代码呈现规范、配图建议、结尾 CTA、发布前检查清单与去 AI 味质检（not-X-but-Y 对比句、排比三连、破折号滥用、夸张措辞、装饰性加粗等 AI 腔清除）。触发词：Medium 文章、技术博客、写一篇 blog、tech writing、Medium 风格、英文技术文章、technical article、去 AI 味。不适用于：中文公众号排版、纯文档/API reference。"
+description_zh: 按主流技术出版物规范撰写 Medium 技术长文：覆盖教程、清单、讲解、迁移、案例、公告、总结七类体裁，内置标题公式、成文骨架、发布前检查清单与去 AI 味质检。
+description_en: Write publication-grade Medium tech articles across seven genres with corpus-tested skeletons, title formulas, a pre-publish checklist, and a built-in de-AI flavor pass.
+examples_zh:
+  - "用 Medium 风格写一篇关于 Gradle 配置缓存的教程"
+  - "把这份草稿改写成一篇 Medium 技术文章"
+  - "对这篇文章跑一遍去 AI 味质检"
+examples_en:
+  - "Write a Medium-style tutorial about Gradle configuration cache"
+  - "Rewrite this draft as a Medium tech article"
+  - "Run the de-AI flavor pass on this article"
+version: 1.0.0
+author: "Jayvinz"
 agent_created: true
 ---
 
