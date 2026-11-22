@@ -1,0 +1,10 @@
+{
+  "$schema": "https://skills.sh/schemas/skills.sh.schema.json",
+  "groupings": [
+    {
+      "title": "Writing",
+      "description": "Skills for writing publication-grade technical articles with corpus-tested norms and a built-in de-AI flavor pass.",
+      "skills": ["medium-tech-writing"]
+    }
+  ]
+}
