@@ -1,5 +1,7 @@
 # medium-tech-writing
 
+<img src="assets/medium-tech-writing-icon-512.png" width="96" alt="medium-tech-writing icon">
+
 一个给 AI Agent 用的技能包，按成熟英文技术出版物的风格产出 Medium 级别的技术长文。
 写作规范提炼自大量真实文章的量化分析，自带一道"去 AI 味"质检，让产出读起来像人写的，
 而不是模型生成的。
@@ -144,6 +146,16 @@ medium-tech-writing/
 
 **Note**：写作规范面向 Medium 的英文技术出版物。技能可按要求切换输出语言，
 去味质检同样适用于中文稿，但文体骨架和标题公式的统计口径来自英文文章。
+
+## Release 构建
+
+推送 `v*` 标签会触发 CI：校验 SKILL.md frontmatter、比对标签与 `version` 字段，
+然后把技能打成 SkillHub 可上传的 zip（第一层为技能目录），挂到 GitHub Release。
+
+```bash
+git tag v1.0.0
+git push origin v1.0.0
+```
 
 ## 许可证
 

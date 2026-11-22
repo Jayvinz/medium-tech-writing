@@ -1,0 +1,49 @@
+name: Build skill package
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Validate SKILL.md
+        run: |
+          python3 - <<'PY'
+          import os, re, sys
+          path = "skills/medium-tech-writing/SKILL.md"
+          text = open(path, encoding="utf8").read()
+          m = re.match(r"^---\n(.*?)\n---", text, re.S)
+          if not m:
+              sys.exit("SKILL.md missing YAML frontmatter")
+          fm = m.group(1)
+          required = ["name", "display_name", "description", "version", "author"]
+          missing = [f for f in required if not re.search(rf"^{f}:", fm, re.M)]
+          if missing:
+              sys.exit(f"missing frontmatter fields: {missing}")
+          version = re.search(r"^version:\s*[\"']?([^\"'\s]+)", fm, re.M).group(1)
+          tag = os.environ["GITHUB_REF_NAME"].lstrip("v")
+          if version != tag:
+              sys.exit(f"version mismatch: SKILL.md version={version}, tag=v{tag}")
+          print(f"OK: medium-tech-writing {version}")
+          PY
+
+      - name: Build SkillHub zip
+        run: |
+          cd skills
+          zip -r "../medium-tech-writing-${GITHUB_REF_NAME#v}.zip" medium-tech-writing \
+            -x "*.DS_Store" -x "__pycache__/*" -x "_*"
+
+      - name: Create GitHub Release with zip
+        uses: softprops/action-gh-release@v2
+        with:
+          files: medium-tech-writing-*.zip
+          generate_release_notes: true

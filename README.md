@@ -1,5 +1,7 @@
 # medium-tech-writing
 
+<img src="assets/medium-tech-writing-icon-512.png" width="96" alt="medium-tech-writing icon">
+
 An AI-agent skill that writes publication-grade Medium technical articles in the style of leading
 tech publications. It carries writing norms distilled from a large corpus of real articles, plus a built-in
 de-AI flavor pass so the output reads like a human author rather than a language model.
@@ -150,6 +152,17 @@ can host companion skills later without breaking install scripts.
 **Note**: the writing norms target Medium's English-language technical publications. The skill
 switches output language on request, and the de-AI pass works on Chinese drafts too, but the genre
 skeletons and title formulas were measured from English articles.
+
+## Releases
+
+Pushing a `v*` tag runs CI that validates the SKILL.md frontmatter, checks the tag against the
+`version` field, and packages the skill into a SkillHub-ready zip (first level is the skill
+directory) attached to the GitHub Release.
+
+```bash
+git tag v1.0.0
+git push origin v1.0.0
+```
 
 ## License
 
