@@ -58,6 +58,21 @@ Install locations:
 | User-level | the agent's user-level skills directory | default; available in every project |
 | Project-level | the workspace's project skills directory | share with teammates via the repo |
 
+### GUI install (WorkBuddy)
+
+In WorkBuddy you can search for and install the skill from the UI — no manual file copying needed.
+Three steps:
+
+1. Click **专家·技能·连接器** (Experts · Skills · Connectors) in the left sidebar, then open the
+   **技能** (Skills) tab.
+2. Type **Medium技术写作** into the search box at the top right.
+3. Find **Medium 技术写作** in the results and click to install (the image below marks the entry,
+   the tab, and the search box).
+
+![Search for and install Medium 技术写作 in WorkBuddy](assets/workbuddy-gui-install.png)
+
+Once installed, verify it with the steps below.
+
 ### Verify the install
 
 Ask your agent something like:

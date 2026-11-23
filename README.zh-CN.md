@@ -55,6 +55,18 @@ Copy-Item -Recurse medium-tech-writing\skills\medium-tech-writing <你的Agent�
 | 用户级 | Agent 的用户级技能目录 | 默认；所有项目可用 |
 | 项目级 | 工作区的项目级技能目录 | 随仓库共享给团队 |
 
+### GUI 安装（WorkBuddy）
+
+在 WorkBuddy 里可以直接通过界面搜索安装，不用手动复制文件。三步搞定：
+
+1. 点击左侧栏的「专家·技能·连接器」，切换到「技能」标签。
+2. 在右上角的搜索框输入「Medium技术写作」。
+3. 在结果中找到「Medium 技术写作」，点进去安装即可（下图标注了入口、标签和搜索框）。
+
+![在 WorkBuddy 中搜索并安装 Medium 技术写作](assets/workbuddy-gui-install.png)
+
+装好后按下面的步骤验证即可。
+
 ### 验证安装
 
 对你的 Agent 说一句：
